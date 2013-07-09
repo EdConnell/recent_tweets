@@ -15,12 +15,11 @@ class TwitterUser < ActiveRecord::Base
   end
 
   def fetch_tweets!
-    Twitter.search("from:#{self.handle}").results.map do |status|
+    Twitter.user_timeline("#{self.handle}").each do |status|
       if self.name.nil?
         self.name = status[:user][:name]
       end
-      self.tweets.build(:text => status.text, :posted_at => status.created_at)
-      self.save
+      self.tweets.create(:text => status.text, :posted_at => status.created_at)
     end
   end
 

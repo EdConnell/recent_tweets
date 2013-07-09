@@ -3,7 +3,7 @@
 <div class="tweets">
   <h3><%= @user.name %>'s Tweets</h3>
   <% @tweets.each do |tweet| %>
-  <p><%= tweet.text.gsub(/(http:\/\/t\.co\/.+)/, "<a href='\\1'>'\\1'</a>")  %> &lt Posted at <%= tweet.posted_at %></p>
+  <p><%= tweet.text.gsub(/(http:\/\/t\.co\/.{10})/, "<a href='\\1'>'\\1'</a>")  %> &lt Posted at <%= tweet.posted_at %></p>
   <% end %>
   <% end %>
 </div>
