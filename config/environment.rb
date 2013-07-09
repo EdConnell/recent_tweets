@@ -35,7 +35,7 @@ Dir[APP_ROOT.join('app', 'helpers', '*.rb')].each { |file| require file }
 require APP_ROOT.join('config', 'database')
 
 Twitter.configure do |config|
-  config.consumer_key = 'WqofIiSME27dk0pj9QfpwQ'
-  config.consumer_secret = 'O6g1gnVcS5X2QitpGMbeh6QQ5mBvKWCLYe08LmprfDQ'
+  config.consumer_key = ENV['TWITTER_KEY']
+  config.consumer_secret = ENV['TWITTER_SECRET']
   
 end
