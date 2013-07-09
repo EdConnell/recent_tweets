@@ -18,7 +18,7 @@ gem 'bcrypt-ruby'
 gem 'shotgun'
 gem 'oauth'
 
-group :test do
-  gem 'faker'
-  gem 'rspec'
-end
+gem 'faker'
+gem 'rspec'
+# group :test do
+# end
