@@ -3,6 +3,11 @@
   margin: 40px;
 }
 
+form {
+  padding:10px;
+  margin: 10px;
+}
+
 .tweets {
   margin: 30px;
 

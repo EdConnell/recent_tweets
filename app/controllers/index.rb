@@ -54,3 +54,9 @@ post '/tweets' do
   p params
   redirect "/#{params[:tweeter]}"
 end
+
+post '/tweets/new' do
+  Twitter.update("#{params[:tweet]}")
+  @tweet_sent = true
+  erb :index
+end

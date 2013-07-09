@@ -4,8 +4,14 @@
     <input type="text" name="tweeter" placeholder="ex. robdelaney">
     <input type="submit" value="Let's see those tweets!">
   </form>
-  <% if @load_wait %>
-    <div id="load_wait">
+  <form id="tweet-from" action="/tweets/new" method="post">
+    <label for="tweet">Send out a tweet!</label>
+    <input type="text" name="tweet" placeholder="Enter your tweet text here">
+    <input type="submit" value="Send your tweet">
+  </form>
+  <% if @tweet_sent %>
+    <div>
+      <p>Tweet sent!</p>
     </div>
     <% end %>
 

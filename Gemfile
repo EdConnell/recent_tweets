@@ -16,6 +16,7 @@ gem 'twitter'
 gem 'rake'
 gem 'bcrypt-ruby'
 gem 'shotgun'
+gem 'oauth'
 
 group :test do
   gem 'faker'
