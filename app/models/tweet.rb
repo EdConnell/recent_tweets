@@ -1,6 +1,6 @@
 class Tweet < ActiveRecord::Base
   belongs_to :twitter_user
-  validates :text, :uniqueness => true
+  validates :real_tweet_id, :uniqueness => true
   validates :text, :presence => true
 
   # def text=(text)

@@ -19,7 +19,7 @@ class TwitterUser < ActiveRecord::Base
       if self.name.nil?
         self.name = status[:user][:name]
       end
-      self.tweets.create(:text => status.text, :posted_at => status.created_at)
+      self.tweets.create(:text => status.text, :posted_at => status.created_at, :real_tweet_id => status.id)
     end
   end
 

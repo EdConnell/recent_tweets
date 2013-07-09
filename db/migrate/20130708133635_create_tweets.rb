@@ -4,7 +4,7 @@ class CreateTweets < ActiveRecord::Migration
       t.string :text
       t.datetime :posted_at
       t.belongs_to :twitter_user
-      t.timestamps
+      t.string :real_tweet_id
     end
   end
 end
